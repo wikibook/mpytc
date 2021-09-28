@@ -17,3 +17,4 @@ dependencies:
     - nltk
     - pycocotools
     - cython  # needed for pycocotools
+    - captum==0.2.0
