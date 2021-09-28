@@ -1,9 +1,14 @@
 */.ipynb_checkpoints/*.*
 **/data_dir/*
 **/models_dir/*
-**/data/*
-**/.data
+**/*data*
+*/model_checkpoint
+*/result_plots
+
 *.pt
 *.pth
 
 Chapter04/aclImdb
+Chapter05/cached_graph_obj
+Chapter05/image2*
+
