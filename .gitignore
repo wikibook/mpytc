@@ -2,4 +2,8 @@
 **/data_dir/*
 **/models_dir/*
 **/data/*
-**/*.pth
+**/.data
+*.pt
+*.pth
+
+Chapter04/aclImdb
