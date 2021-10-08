@@ -8,21 +8,30 @@ dependencies:
   - pytorch::torchtext
   - pytorch::torchvision
   - fastai::fastai==2.1.8  # https://forums.fast.ai/t/part1-2020-02-production-found-at-least-two-devices-cuda-0-and-cpu/87253/18
+  - cython  # should be installed before installing cocoapi
+  - numpy==1.18.5  # to avoid conflict between versions selected by conda and pip
+  - Pillow<8.3.0  # https://forums.fast.ai/t/runtimeerror-could-not-infer-dtype-of-pilimage/89697
   - pip
   - pip:
     - matplotlib
     - nltk
-    - pycocotools
+    - git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI  # pycocotools alternative https://changhsinlee.com/pycocotools/
     - torchviz
     - networkx
     - sentencepiece
     - transformers
-    - cython  # needed for pycocotools
+    - opencv-python
     - atari-py
-    - gym
+    - gym<0.20  # https://www.reddit.com/r/reinforcementlearning/comments/przpu6/gym_cannot_make_atari_envs_work_on_windows_machine/
+    - ale-py<0.7.1  # https://stackoverflow.com/questions/69371528/attributeerror-module-ale-py-gym-has-no-attribute-algymenv
     - autoPyTorch
     - configspace
     - git+https://github.com/shukon/HpBandSter.git
     - optuna
     - captum
-    - Pillow<8.3.0  # https://forums.fast.ai/t/runtimeerror-could-not-infer-dtype-of-pilimage/89697
+    - torch-model-archiver==0.2.0
+    - torchserve
+    - Flask
+    - onnx
+    - onnx-tf
+    - tensorflow<=1.15.5
