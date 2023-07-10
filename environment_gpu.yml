@@ -1,0 +1,42 @@
+name: mpytc_gpu
+dependencies:
+  - python=3.7.16
+  - jupyter
+  - notebook
+  - tqdm
+  - cudatoolkit
+  - pytorch::pytorch==1.7.1
+  - pytorch::torchvision==0.8.2
+  - pytorch::torchaudio==0.7.2
+  - pytorch::torchtext==0.8.1
+  - pytorch::torchserve==0.5.2
+  - pytorch::torch-model-archiver==0.2.0
+  - pytorch::captum==0.6.0
+  - tensorflow==1.15.0
+  - tensorflow-estimator==1.15.1
+  - conda-forge::nltk==3.8.1
+  - conda-forge::pycocotools==2.0.4
+  - conda-forge::gym==0.19.0  # https://www.reddit.com/r/reinforcementlearning/comments/przpu6/gym_cannot_make_atari_envs_work_on_windows_machine/
+  - conda-forge::networkx==2.5.1
+  - conda-forge::zipp==3.15.0
+  - fastai::fastai==2.1.8  # https://forums.fast.ai/t/part1-2020-02-production-found-at-least-two-devices-cuda-0-and-cpu/87253/18
+  - cython  # should be installed before installing cocoapi
+  - numpy==1.21.5
+  - Pillow==9.3.0
+  - pip
+  - pip:
+    - matplotlib
+    - torchviz
+    - sentencepiece
+    - transformers
+    - opencv-python
+    - atari-py
+    - ale-py==0.7.0  # https://stackoverflow.com/questions/69371528/attributeerror-module-ale-py-gym-has-no-attribute-algymenv
+    - autoPyTorch
+    - configspace
+    - hpbandster
+    - optuna
+    - Flask
+    - onnx==1.5.0
+    - onnx-tf==1.5.0
+    - torch==1.7.1
